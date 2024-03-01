@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExampleReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="74810673-dcbb-476f-9fcb-9ae9d22e7309">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="voucherId" class="java.lang.String"/>
+    <parameter name="voucherDate" class="java.lang.String"/>
+    <parameter name="amountPaid" class="java.math.BigDecimal"/>
+    <parameter name="paymentMethod" class="java.lang.String"/>
+    <parameter name="parentName" class="java.lang.String"/>
+    <parameter name="studentName" class="java.lang.String"/>
+    <parameter name="imageDir" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="105" splitType="Stretch">
+            <staticText>
+                <reportElement x="80" y="20" width="400" height="30" uuid="ad16b219-7dbb-4528-8d6d-e331cc226ddf"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[¡Comprobante electrónico!]]></text>
+            </staticText>
+            <image>
+                <reportElement x="259" y="58" width="37" height="39" uuid="5dcb3c02-8bee-4a8d-a94e-e26ed264fafc"/>
+                <imageExpression><![CDATA[$P{imageDir} + "check.png"]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="147" splitType="Stretch">
+            <staticText>
+                <reportElement x="106" y="11" width="402" height="30" uuid="4915410f-9cda-43a7-b800-b04da23b629d"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[Para cualquier reclamo debe presentar este comprobante impreso.]]></text>
+            </staticText>
+            <image>
+                <reportElement x="48" y="5" width="40" height="40" uuid="978d3731-e063-45e5-a11f-149481ef0819"/>
+                <imageExpression><![CDATA[$P{imageDir} + "light.png"]]></imageExpression>
+            </image>
+            <rectangle>
+                <reportElement mode="Transparent" x="30" y="0" width="489" height="55" forecolor="#ADADAD" uuid="34653055-3bc0-4d9d-b153-40570ff61a49">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </rectangle>
+            <rectangle>
+                <reportElement mode="Transparent" x="30" y="66" width="489" height="73" forecolor="#ADADAD" uuid="a4c19217-e796-4c86-b4cc-4ac2e6314615">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="183" y="78" width="110" height="22" uuid="465d6b20-8a7e-477b-ac30-c5bbccbb5658"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Comprobante Nro.]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="298" y="78" width="100" height="22" uuid="dd1a5569-7e10-4578-ab8b-e5a1d8433432"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{voucherId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="227" y="110" width="100" height="19" uuid="9bd88e68-197c-4cff-8953-7bde56d41def"/>
+                <textFieldExpression><![CDATA[$P{voucherDate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="26" splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="224" splitType="Stretch">
+            <rectangle>
+                <reportElement mode="Transparent" x="36" y="20" width="489" height="100" forecolor="#ADADAD" uuid="081bd7f2-dc41-464f-bc31-100e05353a0c">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <graphicElement>
+                    <pen lineStyle="Dotted"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="187" y="30" width="100" height="19" uuid="efa6686f-37d0-4135-af07-e8f72ea99db0"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Valor pagado:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="187" y="50" width="100" height="19" uuid="3f3accf9-1ad8-4e73-83df-c73a9ec8bd07"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Medio de pago:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="187" y="70" width="100" height="19" uuid="d61e2637-581b-46ea-8b3a-fb7bbf56a09e"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Nombre acudiente:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="187" y="91" width="100" height="19" uuid="b1e44316-f44d-4240-b3b0-4a88f4a7d89e"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Nombre estudiante:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="288" y="30" width="107" height="19" uuid="d716b6fc-15b7-435f-94fd-02bd0ae25a7e"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["$" + $P{amountPaid}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="288" y="50" width="107" height="19" uuid="ee348724-1f12-4771-b6e5-d9b9cb874896"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{paymentMethod}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="288" y="71" width="107" height="19" uuid="c05fb523-77a7-4d1e-aa0c-2cb76eec2292"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{parentName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="288" y="91" width="107" height="19" uuid="b7b35b7b-d759-4b54-9853-4186aa88aa00"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{studentName}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="390" y="190" width="129" height="30" uuid="e7eca26a-5be5-4af3-a296-ef7b7acaee65"/>
+                <text><![CDATA[_______________________
+   Empresa proveedora]]></text>
+            </staticText>
+            <image>
+                <reportElement x="390" y="157" width="116" height="50" uuid="de8b4d17-6d83-4ec4-afca-f96bb451be9c"/>
+                <imageExpression><![CDATA[$P{imageDir} + "firma.png"]]></imageExpression>
+            </image>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="70" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
